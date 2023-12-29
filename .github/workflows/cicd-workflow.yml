@@ -20,8 +20,8 @@ jobs:
     runs-on: [aws-ec2]
     steps:
       - name: Pull image from docker hub
-        run: docker pull amiya777/nodejs-app:latest
+        run: sudo docker pull amiya777/nodejs-app:latest
       - name: Delete old container
         run: docker rm -f nodejs-app-container
       - name: Run docker container
-        run: docker run -d -p 5000:5000 --name nojejs-app-container amiya777/nodesjs-app
+        run: docker run -d -p 5000:5000 --name nodejs-app-container amiya777/nodesjs-app
